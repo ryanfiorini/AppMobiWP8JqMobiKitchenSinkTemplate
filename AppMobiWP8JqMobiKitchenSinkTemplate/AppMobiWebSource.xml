@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- This file is auto-generated, do not edit! -jm -->
+<AppMobiWebSource>
+  <FilePath Value="html\index.html"/>
+  <FilePath Value="html\jq.mobi.js"/>
+  <FilePath Value="html\touch.js"/>
+
+  <FilePath Value="html\_appMobi\appmobi.js"/>
+  <FilePath Value="html\_appMobi\appmobi_local_bootstrap.js"/>
+  <FilePath Value="html\_appMobi\xhr.js"/>
+
+  <FilePath Value="html\defer\index.html"/>
+
+  <FilePath Value="html\kitchensink\ajax.html"/>
+  <FilePath Value="html\kitchensink\external.html"/>
+  <FilePath Value="html\kitchensink\icons.css"/>
+  <FilePath Value="html\kitchensink\jq.ui.css"/>
+  <FilePath Value="html\kitchensink\json.html"/>
+
+  <FilePath Value="html\kitchensink\images\badge.png"/>
+  <FilePath Value="html\kitchensink\images\splash.png"/>
+
+  <FilePath Value="html\plugins\jq.actionsheet.js"/>
+  <FilePath Value="html\plugins\jq.alphatable.js"/>
+  <FilePath Value="html\plugins\jq.carousel.js"/>
+  <FilePath Value="html\plugins\jq.css3animate.js"/>
+  <FilePath Value="html\plugins\jq.debug.js"/>
+  <FilePath Value="html\plugins\jq.desktopBrowsers.js"/>
+  <FilePath Value="html\plugins\jq.drawer.js"/>
+  <FilePath Value="html\plugins\jq.fx.js"/>
+  <FilePath Value="html\plugins\jq.passwordBox.js"/>
+  <FilePath Value="html\plugins\jq.popup.js"/>
+  <FilePath Value="html\plugins\jq.scroller.js"/>
+  <FilePath Value="html\plugins\jq.selectBox.js"/>
+  <FilePath Value="html\plugins\jq.shake.js"/>
+  <FilePath Value="html\plugins\jq.swipe.js"/>
+  <FilePath Value="html\plugins\jq.template.js"/>
+  <FilePath Value="html\plugins\jq.touchEvents.js"/>
+  <FilePath Value="html\plugins\jq.touchLayer.js"/>
+  <FilePath Value="html\plugins\jq.web.min.js"/>
+
+  <FilePath Value="html\plugins\css\jq.actionsheet.css"/>
+  <FilePath Value="html\plugins\css\jq.popup.css"/>
+  <FilePath Value="html\plugins\css\jq.scroller.css"/>
+  <FilePath Value="html\plugins\css\jq.selectBox.css"/>
+
+  <FilePath Value="html\ui\jq.ui.js"/>
+
+  <FilePath Value="html\ui\transitions\all.js"/>
+  <FilePath Value="html\ui\transitions\fade.js"/>
+  <FilePath Value="html\ui\transitions\flip.js"/>
+  <FilePath Value="html\ui\transitions\pop.js"/>
+  <FilePath Value="html\ui\transitions\slide.js"/>
+  <FilePath Value="html\ui\transitions\slideDown.js"/>
+  <FilePath Value="html\ui\transitions\slideUp.js"/>
+</AppMobiWebSource>
