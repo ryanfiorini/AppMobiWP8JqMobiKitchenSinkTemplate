@@ -3,7 +3,7 @@
 <head>
 <title>jqMobi Kitchen Sink</title>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8"> 
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">-->
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
 
@@ -39,6 +39,10 @@
         color:red;
     }
 	.jqmscrollBar {background:white !important;}	
+
+            /*  If you use this the AppMobi.display.useViewport wi not work
+            @-ms-viewport { width: 480px; }
+            @viewport { width: 480px; }*/
 </style>
 
     <script type="text/javascript" charset="utf-8" src="_appMobi/appmobi_local_bootstrap.js"></script> 
@@ -132,8 +136,18 @@ oldElem=document.getElementsByTagName("link")[0];
     /* This code is used to run as soon as appMobi activates */
 	var onDeviceReady = function () {
         AppMobi.debug.log("onDeviceReady 1: " + AppMobi.webRoot);
-        //AppMobi.device.setRotateOrientation("portrait");
+
+	    // IE does NOT provide an alert method, you can patch it with this line after deviceready.
+        window.alert = window.alert || navigator.notification.alert;
+
+        var orientation = "portrait";  // portrait or landscape
+        var portraitWidth = 320;
+        var landscapeWidth = 480;
+
         AppMobi.device.setAutoRotate(false);
+	    //AppMobi.device.setRotateOrientation(orientation);
+        AppMobi.display.useViewport(portraitWidth, landscapeWidth);
+
         webRoot = AppMobi.webRoot + "kitchensink/";
         //hide splash screen
 	    AppMobi.device.hideSplashScreen();	
