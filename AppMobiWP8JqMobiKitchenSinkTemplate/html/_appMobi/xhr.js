@@ -22,6 +22,7 @@
     }
 
     XMLHttpRequest.Extension.sendXMLHTTP = function (data) {
+        AppMobi.debug.log("in XMLHttpRequest.Extension.sendXMLHTTP");
         var myparams = new AppMobi.Device.RemoteDataParameters();
         for (var j in data.headers) {
             myparams.addHeader(j, data.headers[j]);
@@ -44,12 +45,12 @@
     }
 
     XMLHttpRequest.Extension.handleResponseData = function (object) {
-
+        AppMobi.debug.log("in XMLHttpRequest.Extension.handleResponseData");
         var XMLObj = XMLHttpRequest.Extension[object.id];
         //EMULATED "HEADERS RECEIVED" CHANGES
         var newHeaders = [];
-	   if(object.success == false)
-	   {
+	    if(object.success == false)
+	    {
 			XMLObj.response = null;
 			XMLObj.status = null;
 			XMLObj.responseText = null;
@@ -139,6 +140,7 @@
     };
 
     XMLHttpRequest.prototype.open = function (method, url, async, user, password) {
+        AppMobi.debug.log("in XMLHttpRequest.prototype.open");
         //supported methods: CONNECT, DELETE, GET, HEAD, OPTIONS, POST, PUT, TRACE, or TRACK
 		/*    Empty the list of author request headers.
 		Set the request method to method.
@@ -162,6 +164,7 @@
     XMLHttpRequest.prototype.removeEventListener = function removeEventListener() {};
 
     XMLHttpRequest.prototype.send = function send(data) {
+        AppMobi.debug.log("in XMLHttpRequest.prototype.send");
         this.body = data;
 		if(this.requestData.asynchronous===false)
 		{
