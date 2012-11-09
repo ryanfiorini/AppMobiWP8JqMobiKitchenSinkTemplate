@@ -53,6 +53,8 @@
 <script type="text/javascript" charset="utf-8" src="jq.mobi.js"></script> 
 <script type="text/javascript" charset="utf-8" src="_appMobi/jq.desktopBrowsers.js" ></script>
 
+<script type="text/javascript" charset="utf-8" src="_appMobi/window.js" ></script>
+
 <script>
 function loadedPanel(what){
     //We are going to set the badge as the number of li elements inside the target
@@ -111,15 +113,6 @@ $(document).ready(function(){
 <script type="text/javascript" charset="utf-8" src="ui/jq.ui.js"></script> 
 
 <script type="text/javascript">
-    // *** AppMobi.debug.log("") to display messages in the VS 2012 output window. ***
-    // For debugging purposes (This will save your life)
-    window.onerror = function myErrorHandler(errorMsg, url, lineNumber) {
-        AppMobi.debug.log("--------------------");
-        AppMobi.debug.log("onerror: errorMsg: " + errorMsg);
-        AppMobi.debug.log("onerror: url: " + url);
-        AppMobi.debug.log("onerror: lineNumber: " + lineNumber);
-        AppMobi.debug.log("--------------------");
-    }
 
     /* This function runs once the page is loaded, but appMobi is not yet active */
     var webRoot = "html/kitchensink/";
@@ -127,20 +120,18 @@ $(document).ready(function(){
     $.ui.openLinksNewTab=false;
     $.ui.resetScrollers=false;
     var init = function () {
-        AppMobi.debug.log("init");
-	   $.ui.backButtonText="Back";  
-	   //window.setTimeout(function(){$.ui.launch();},1500);
-       //$.ui.removeFooterMenu(); This would remove the bottom nav menu
+        // *** console.log("") to display messages in the Visual Studio Output Window. ***
+        console.log("init");
+	    $.ui.backButtonText="Back";  
+	    //window.setTimeout(function(){$.ui.launch();},1500);
+        //$.ui.removeFooterMenu(); This would remove the bottom nav menu
     };
     document.addEventListener("DOMContentLoaded",init,false);  
 	$.ui.ready(function(){});
 
     /* This code is used to run as soon as appMobi activates */
 	var onDeviceReady = function () {
-        AppMobi.debug.log("onDeviceReady 1: " + AppMobi.webRoot);
-
-	    // IE does NOT provide an alert method, you can patch it with this line after deviceready.
-        window.alert = window.alert || navigator.notification.alert;
+        console.log("onDeviceReady: " + AppMobi.webRoot);
 
         var orientation = "portrait";  // portrait or landscape
         var portraitWidth = 320;
@@ -160,7 +151,7 @@ $(document).ready(function(){
 
 
     var onOrientationChange = function () {
-        AppMobi.debug.log("in onOrientationChange");
+        console.log("in onOrientationChange");
 
         // do what you like here
     };

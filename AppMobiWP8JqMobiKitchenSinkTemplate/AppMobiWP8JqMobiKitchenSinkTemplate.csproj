@@ -192,6 +192,7 @@
     <Content Include="html\ui\transitions\slideUp.js" />
     <Content Include="html\_appMobi\appmobi.js" />
     <Content Include="html\_appMobi\appmobi_local_bootstrap.js" />
+    <Content Include="html\_appMobi\window.js" />
     <Content Include="html\_appMobi\xhr.js" />
     <Content Include="readme.txt" />
   </ItemGroup>
