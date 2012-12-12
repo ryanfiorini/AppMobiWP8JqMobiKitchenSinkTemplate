@@ -49,12 +49,8 @@
 </style>
 
 <script type="text/javascript" charset="utf-8" src="_appMobi/appmobi_local_bootstrap.js"></script> 
-
 <script type="text/javascript" charset="utf-8" src="jq.mobi.js"></script> 
-<script type="text/javascript" charset="utf-8" src="_appMobi/jq.desktopBrowsers.js" ></script>
-
 <script type="text/javascript" charset="utf-8" src="_appMobi/window.js" ></script>
-
 <script type="text/javascript" charset="utf-8" src="_appMobi/xhr.js" ></script>
 
 <script>
@@ -523,8 +519,11 @@ $(document).ready(function(){
 	<div id="jqm27" class="panel"  title=".getJSON()" data-nav="menu_jqmobi">
 		$.getJSON(url,data,success); - Makes a XMLHpttRequest GET request and returns a JSON object.<br /><br />
 		<script>
-			function doJSON(){
-				$.getJSON(webRoot+'json.html',function(data){$('#jqm27_content').html(JSON.stringify(data))});
+		    function doJSON() {
+		        //var url = webRoot+'json.html';
+		        var url = "http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/new_releases.json?apikey=96v4f4t3mdzcpwuk4vw7wj64";
+
+		        $.getJSON(url, function (data) { console.log("ryan: " + data); $('#jqm27_content').html(JSON.stringify(data))});
 			}
 		</script>
 		<div style="border:1px solid black" id="jqm27_content">Returned object</div><br />

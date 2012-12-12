@@ -2,7 +2,7 @@
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US" />
   <App xmlns="" ProductID="{57003f94-0fc4-4719-acc7-5f71b06661d4}" Title="AppMobiWP8JqMobiKitchenSinkTemplate" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="AppMobiWP8JqMobiKitchenSinkTemplate author" Description="Sample description" Publisher="AppMobiWP8JqMobiKitchenSinkTemplate" PublisherID="{e1f18504-fc20-4983-b64f-2906f8915fe1}">
-    <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
+    <IconPath IsRelative="true" IsResource="false">appmobi.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
       <Capability Name="ID_CAP_MEDIALIB_AUDIO" />

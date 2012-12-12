@@ -6,6 +6,7 @@
     var ajaxCallbacks = [];
 
     function getRemoteExtCB(obj) {
+        console.log("Valerie: " + obj);
         if (ajaxCallbacks[obj.id]) {
             ajaxCallbacks[obj.id](obj);
         }

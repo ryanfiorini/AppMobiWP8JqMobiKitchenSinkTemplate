@@ -127,6 +127,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="appmobi.png" />
     <Content Include="AppMobiWebSource.xml">
       <SubType>Designer</SubType>
     </Content>
