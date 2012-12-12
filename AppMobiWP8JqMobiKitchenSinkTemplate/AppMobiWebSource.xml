@@ -2,11 +2,11 @@
 <!-- This file is auto-generated, do not edit! -jm -->
 <AppMobiWebSource>
   <FilePath Value="html\index.html"/>
-  <FilePath Value="html\jq.mobi.js"/>
-  <FilePath Value="html\touch.js"/>
 
   <FilePath Value="html\_appMobi\appmobi.js"/>
   <FilePath Value="html\_appMobi\appmobi_local_bootstrap.js"/>
+  <FilePath Value="html\_appMobi\jq.mobi.js"/>
+  <FilePath Value="html\_appMobi\jq.mobi.min.js"/>
   <FilePath Value="html\_appMobi\window.js"/>
   <FilePath Value="html\_appMobi\xhr.js"/>
 
@@ -15,12 +15,15 @@
   <FilePath Value="html\kitchensink\ajax.html"/>
   <FilePath Value="html\kitchensink\external.html"/>
   <FilePath Value="html\kitchensink\icons.css"/>
+  <FilePath Value="html\kitchensink\jq.8tiles.css"/>
   <FilePath Value="html\kitchensink\jq.ui.css"/>
+  <FilePath Value="html\kitchensink\jq.ui.less.css"/>
   <FilePath Value="html\kitchensink\json.html"/>
 
   <FilePath Value="html\kitchensink\images\badge.png"/>
   <FilePath Value="html\kitchensink\images\splash.png"/>
 
+  <FilePath Value="html\plugins\jq.8tiles.js"/>
   <FilePath Value="html\plugins\jq.actionsheet.js"/>
   <FilePath Value="html\plugins\jq.alphatable.js"/>
   <FilePath Value="html\plugins\jq.carousel.js"/>

@@ -120,6 +120,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <None Include="html\kitchensink\jq.ui.less" />
+    <None Include="html\plugins\README.md" />
+    <None Include="html\ui\transitions\build.php" />
     <None Include="packages.config" />
     <None Include="Properties\AppManifest.xml" />
     <None Include="Properties\WMAppManifest.xml">
@@ -152,18 +155,20 @@
     </Content>
     <Content Include="html\defer\index.html" />
     <Content Include="html\index.html" />
-    <Content Include="html\jq.mobi.js" />
     <Content Include="html\kitchensink\ajax.html" />
     <Content Include="html\kitchensink\external.html" />
     <Content Include="html\kitchensink\icons.css" />
     <Content Include="html\kitchensink\images\badge.png" />
     <Content Include="html\kitchensink\images\splash.png" />
+    <Content Include="html\kitchensink\jq.8tiles.css" />
     <Content Include="html\kitchensink\jq.ui.css" />
+    <Content Include="html\kitchensink\jq.ui.less.css" />
     <Content Include="html\kitchensink\json.html" />
     <Content Include="html\plugins\css\jq.actionsheet.css" />
     <Content Include="html\plugins\css\jq.popup.css" />
     <Content Include="html\plugins\css\jq.scroller.css" />
     <Content Include="html\plugins\css\jq.selectBox.css" />
+    <Content Include="html\plugins\jq.8tiles.js" />
     <Content Include="html\plugins\jq.actionsheet.js" />
     <Content Include="html\plugins\jq.alphatable.js" />
     <Content Include="html\plugins\jq.carousel.js" />
@@ -182,7 +187,6 @@
     <Content Include="html\plugins\jq.touchEvents.js" />
     <Content Include="html\plugins\jq.touchLayer.js" />
     <Content Include="html\plugins\jq.web.min.js" />
-    <Content Include="html\touch.js" />
     <Content Include="html\ui\jq.ui.js" />
     <Content Include="html\ui\transitions\all.js" />
     <Content Include="html\ui\transitions\fade.js" />
@@ -193,6 +197,8 @@
     <Content Include="html\ui\transitions\slideUp.js" />
     <Content Include="html\_appMobi\appmobi.js" />
     <Content Include="html\_appMobi\appmobi_local_bootstrap.js" />
+    <Content Include="html\_appMobi\jq.mobi.js" />
+    <Content Include="html\_appMobi\jq.mobi.min.js" />
     <Content Include="html\_appMobi\window.js" />
     <Content Include="html\_appMobi\xhr.js" />
     <Content Include="readme.txt" />

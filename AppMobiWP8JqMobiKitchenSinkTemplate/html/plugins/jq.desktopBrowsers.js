@@ -41,6 +41,16 @@
 	    touchevt.target = theTarget;
 		
 		touchevt.mouseToTouch = true;
+		if($.os.ie) {
+		//handle inline event handlers for target and parents (for bubbling)
+			var elem = originalEvent.target;
+			while(elem!=null) {
+				if(elem.hasAttribute("on"+type)) {
+					eval(elem.getAttribute("on"+type));
+				}
+				elem = elem.parentElement;
+			}
+		}
 	    theTarget.dispatchEvent(touchevt);
 	}
 	
@@ -54,6 +64,8 @@
 	    {
 			mouseDown = true;
 			lastTarget = e.target;
+			if(e.target.nodeName.toLowerCase()=="a"&&e.target.href.toLowerCase()=="javascript:;")
+				e.target.href="#";
 	        redirectMouseToTouch("touchstart", e);
 	        firstMove = true;
 	        cancelClickMove=false;
@@ -83,9 +95,8 @@
 
 			mouseDown = true;
 			lastTarget = e.target;
-			if (e.target.nodeName.toLowerCase() == "a" && e.target.href.toLowerCase() == "javascript:;")
-			    e.target.href = "#";
-
+			if(e.target.nodeName.toLowerCase()=="a"&&e.target.href.toLowerCase()=="javascript:;")
+				e.target.href="#";
 	        redirectMouseToTouch("touchstart", e);
 	        firstMove = true;
 	        cancelClickMove=false;

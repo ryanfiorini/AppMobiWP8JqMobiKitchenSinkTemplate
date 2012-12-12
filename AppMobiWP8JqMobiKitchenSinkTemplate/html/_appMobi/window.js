@@ -1,4 +1,4 @@
-﻿if (!window.console) {
+﻿//if (!window.console) {
     window.console = { version: '1.3' };
     window.console.log = function () {
         var args = [].splice.call(arguments, 0);
@@ -20,7 +20,7 @@
         console.error("Line Number: " + lineNum);
         console.error("--------------------");
     }
-}
+//}
 
 // IE does NOT provide an alert method, you can patch it with this line after deviceready.
 if (!window.alert)

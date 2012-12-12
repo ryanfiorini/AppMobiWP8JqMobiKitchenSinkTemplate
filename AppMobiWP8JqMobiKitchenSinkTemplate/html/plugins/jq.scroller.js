@@ -364,8 +364,8 @@
 			//set current scroll
 			if(!firstExecution) this.adjustScroll();
 			//set events
-			//if(this.refresh || this.infinite&&!jq.os.desktop) this.el.addEventListener('touchstart', this, false);
-			//this.el.addEventListener('scroll', this, false)
+			if(this.refresh || this.infinite&&!jq.os.desktop) this.el.addEventListener('touchstart', this, false);
+			this.el.addEventListener('scroll', this, false)
 		}
 		nativeScroller.prototype.disable = function(destroy) {
 			if(!this.eventsActive) return;
@@ -430,7 +430,7 @@
 			}
 
 			this.cY = newcY;
-			e.stopPropagation();
+//			e.stopPropagation();
 		}
         nativeScroller.prototype.showRefresh=function(){
             if(!this.refreshTriggered){
@@ -1148,13 +1148,13 @@
 			if(this.vscrollBar){
 				this.vscrollBar.style[$.feat.cssPrefix+"Transform"] = "none";
 				this.vscrollBar.style[$.feat.cssPrefix+"Transition"] = "none";
-				this.vscrollBar.style[$.feat.cssPrefix+"Terspective"] = "none";
+				this.vscrollBar.style[$.feat.cssPrefix+"Perspective"] = "none";
 				this.vscrollBar.style[$.feat.cssPrefix+"BackfaceVisibility"] = "visible";
 			}
 			if(this.hscrollBar){
 				this.hscrollBar.style[$.feat.cssPrefix+"Transform"] = "none";
 				this.hscrollBar.style[$.feat.cssPrefix+"Transition"] = "none";
-				this.hscrollBar.style[$.feat.cssPrefix+"{erspective"] = "none";
+				this.hscrollBar.style[$.feat.cssPrefix+"Perspective"] = "none";
 				this.hscrollBar.style[$.feat.cssPrefix+"BackfaceVisibility"] = "visible";
 			}
 
@@ -1270,10 +1270,6 @@
 		jsScroller.prototype.scrollToTop=function(time){
 			this.scrollTo({x:0,y:0},time);
 		}
-
-		//debug JS scrolling
-		//jsScroller = $.debug.type(jsScroller, 'jsScroller');
-		//return main function
 		return scroller;
 	})();
 })(jq);

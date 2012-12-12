@@ -28,7 +28,7 @@
 	};
 	//configuration stuff
 	var inputElements = ['input', 'select', 'textarea'];
-	var autoBlurInputTypes = ['button', 'radio', 'checkbox', 'range'];
+	var autoBlurInputTypes = ['button', 'radio', 'checkbox', 'range','date'];
 	var requiresJSFocus = $.os.ios; //devices which require .focus() on dynamic click events
 	var verySensitiveTouch = $.os.blackberry; //devices which have a very sensitive touch and touchmove is easily fired even on simple taps
 	var inputElementRequiresNativeTap = $.os.blackberry || ($.os.android && !$.os.chrome); //devices which require the touchstart event to bleed through in order to actually fire the click on select elements
@@ -236,7 +236,6 @@
 
 			//this.log("click on "+tag);
 			if(inputElements.indexOf(tag) !== -1 && (!this.isFocused_ || !e.target==(this.focusedElement))) {
-
 				var type = e.target && e.target.type != undefined ? e.target.type.toLowerCase() : '';
 				var autoBlur = autoBlurInputTypes.indexOf(type) !== -1;
 
