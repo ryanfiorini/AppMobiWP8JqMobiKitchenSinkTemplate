@@ -38,6 +38,12 @@
 	var requirePanning = $.os.ios; //devices which require panning feature
 	var addressBarError = 0.97; //max 3% error in position
 	var maxHideTries = 2; //HideAdressBar does not retry more than 2 times (3 overall)
+	var skipTouchEnd=false; //Fix iOS bug with alerts/confirms
+	function getTime(){
+		var d = new Date();
+		var n = d.getTime();
+		return n;
+	}
 	var touchLayer = function(el) {
 			this.clearTouchVars();
 			el.addEventListener('touchstart', this, false);
@@ -525,6 +531,13 @@
 		},
 
 		onTouchEnd: function(e) {
+			if($.os.ios){
+				if(skipTouchEnd==e.changedTouches[0].identifier){
+					e.preventDefault();
+					return false;
+				}
+				skipTouchEnd=e.changedTouches[0].identifier;
+			}
 			//double check moved for sensitive devices
 			var itMoved = this.moved;
 			if(verySensitiveTouch) {
@@ -550,8 +563,8 @@
 				if(!this.blockClicks && !this.blockPossibleClick_) {
 					var theTarget = e.target;
 					if(theTarget.nodeType == 3) theTarget = theTarget.parentNode;
-
 					this.fireEvent('MouseEvents', 'click', theTarget, true, e.mouseToTouch);
+					
 					this.lastTouchStartX=this.dX;
 					this.lastTouchStartY=this.dY;
 				}

@@ -3,7 +3,7 @@ if(!$)
 
 function wire8Tiles(){
 	$.ui.ready(function(){
-		console.log("called");
+			
 			//we need to make sure the menu button shows up in the bottom navbar
 			$("#jQUi #navbar").append("<div id='metroMenu' onclick='$.ui.toggleSideMenu()'>•••</div>");
 			var oldUpdate=$.ui.updateNavbarElements;
